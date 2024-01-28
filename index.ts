@@ -23,3 +23,6 @@ server.listen(1000, () => {
 app.get('/get', (req, res) => {
     res.send('POST request to the homepage')
 })
+
+
+const MONG0_URL = 'mongodb+srv://vinodyasachinivinodya:<wa29Zhrqo0IwrUlI>@cluster0.lgqs8o1.mongodb.net/ReadSphere_DB?retryWrites=true&w=majority';
