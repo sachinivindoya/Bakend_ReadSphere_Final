@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'
 import cookieParser from 'cookie-parser'
 import compression from 'compression';
 import cors from 'cors';
+require("dotenv").config();
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 const server= http.createServer(app);
-server.listen(1000, () => {
+server.listen (parseInt(process.env.PORT,10),() => {
     console.log("Server running on > http://localhost:1000/ ");
 })
 
@@ -25,4 +26,4 @@ app.get('/get', (req, res) => {
 })
 
 
-const MONG0_URL = 'mongodb+srv://vinodyasachinivinodya:<wa29Zhrqo0IwrUlI>@cluster0.lgqs8o1.mongodb.net/ReadSphere_DB?retryWrites=true&w=majority';
+
